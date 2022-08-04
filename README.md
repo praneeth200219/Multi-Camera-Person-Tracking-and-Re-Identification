@@ -30,20 +30,12 @@ conda install pytorch torchvision cudatoolkit -c pytorch
 ```
 ## Convert models
 - Download the YOLO models for [YOLO_v3](https://drive.google.com/file/d/18fmQMegNsAzPte7tJeCxwf1iE8JUTQhQ/view?usp=sharing) and [YOLO_v4](https://drive.google.com/file/d/1w9furPagm3KytRW2uNooLcBoiYWDwbop/view?usp=sharing) and add them to /model_data/weights/
-* YOLO_v3
-```python
-python convert_y3.py model_data\weights\yolov3.weights model_data\models\yolov3.h5
-```
+
 * YOLO_v4
 ```python
 python convert_y4.py model_data\weights\yolov4.weights model_data\models\yolov4.h5
 ```
 ## Demo 
- 
-You can try out your own videos by running demo.py.  
-Under the directory \videos\output, the program will generate a video of the tracking, as well as a video of the tracking and ReID. (as can be seen in the example above)  
-You should specify the path of the videos and the version of YOLO you would like to use (v3 or v4) 
-
 ```python
 python demo.py --videos videos\init\Double1.mp4 videos\init\Single1.mp4 --version v3
 ```
